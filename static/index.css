@@ -1,0 +1,154 @@
+body{
+	background: #1E1F25;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 05vh; /* Adjust the height as needed */
+  margin-top: 50px;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-input {
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+} 
+
+form {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+}
+input[type="number"] {
+  width: 15%;
+  height: 80%;
+  padding: 8px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+button[type="submit"] {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 80%;
+  }
+}
+
+
+table {
+  height: 40vh; /* Adjust the height as needed */
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+thead {
+  background-color: #eee;
+  font-weight: bold;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+td img {
+  max-height: 50px;
+  max-width: 50px;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+ul{
+  font-family: Calibri, sans-serif;
+  list-style-type: none;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+li {
+	padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ebebeb;
+	min-width: 80px;
+	margin: auto;
+}
+
+li:hover {
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+	font-weight: bold;
+}
+li:active {
+  transform: translateY(4px);
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}

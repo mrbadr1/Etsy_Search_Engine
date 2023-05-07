@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="{{ url_for('static', filename='indexid.css') }}">
+   <title>Etsy Search date listing</title>
+</head>
+<body>
+    
+	<div class="search-container">
+      <form  method="POST">
+        <input type="text" placeholder="Etsy product link..." name="listing_date">
+        <button type="submit">get informations</button>
+      </form>
+    </div>
+	{% if dataid %}
+	<table>
+		<thead>
+			<tr>
+				<th>date</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in dataid %}
+			<tr>
+				<td>{{ item.creation_date }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
+</body>
+</html>

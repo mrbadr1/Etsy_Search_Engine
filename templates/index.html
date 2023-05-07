@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+   <title>Etsy Search</title>
+</head>
+<body>
+      <ul>
+         <li >Home</li>
+         <li>Targets</li>
+         <li>Saved products</li>
+		 <li><a href="/listing_date">product date</a></li>
+         <li>About us</li>
+      </ul>
+	<div class="search-container">
+      <form  method="POST">
+        <input type="text" placeholder="Etsy search..." name="query">
+        <input type="number" name="page" placeholder="Page" value="{{ page }}" min="1" >
+        <button type="submit">Search</button>
+      </form>
+    </div>
+	{% if data %}
+	<table>
+		<thead>
+			<tr>
+            <th>picture</th>
+				<th>Title</th>
+				<th>Price</th>
+				<th>Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in data %}
+			<tr>
+            <td><img src="{{ item.img_url }}"></td>
+				<td>{{ item.title }}</td>
+				<td>{{ item.price }}</td>
+				<td>
+               <a href="{{ link_url }}">link</a>
+            </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
+</body>
+</html>
