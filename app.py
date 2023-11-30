@@ -2,7 +2,7 @@ from flask import Flask, render_template, request,jsonify
 import requests
 from bs4 import BeautifulSoup
 app = Flask(__name__)
-ETSY_API_KEY = 'qwoxgbhbzzbu46ukllrzmqc0'
+ETSY_API_KEY = 'your key'
 @app.route('/', methods=['GET'])
 def index():
     if request.method == 'POST':
