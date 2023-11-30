@@ -1,6 +1,6 @@
 import requests
 
-api_key = 'qwoxgbhbzzbu46ukllrzmqc0'
+api_key = 'your key'
 shop_name = '1430607176'
 url = f'https://api.etsy.com/v3/application/shops/{shop_name}/listings/active'
 
